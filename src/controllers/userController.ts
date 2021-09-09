@@ -40,3 +40,64 @@ export const AddUserAction = async (req: Request, res: Response) => {
 
     res.redirect('/');
 }
+
+export const EditUserScreen = async (req: Request, res: Response) => {
+    let id = req.params.id;
+
+    let user = await User.findOne({
+        where: {
+            id: id
+        }
+    })
+
+    if(user) {
+        //console.log(user)
+        res.render('pages/edit', {
+            id: user.id,
+            name: user.name,
+            email: user.email 
+        });
+    } else {
+        res.redirect('/');
+    }
+}
+
+export const EditUserAction = async (req: Request, res: Response) => {
+    let id = req.body.id;
+    let name = req.body.name
+    let email = req.body.email
+
+    let user = await User.findOne({
+        where: {
+            id: id
+        }
+    })
+
+    if(user) {
+        user.name = name
+        user.email = email
+        await user.save()
+
+        res.redirect('/');
+    } else {
+        res.redirect('/editar/' + id)
+    }
+}
+
+export const DeleteUser = async (req: Request, res: Response) => {
+    let id = req.params.id;
+    if(id) {
+
+        await User.destroy({
+            where: {
+                id: id
+            }
+        })
+
+        res.redirect('/');
+
+    } else {
+        res.redirect('/');
+        return;
+    }
+}

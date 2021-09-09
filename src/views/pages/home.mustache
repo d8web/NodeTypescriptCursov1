@@ -35,7 +35,7 @@
 
         <section class="users">
             {{#users}}
-                <p>{{name}} | {{email}}</p>
+                <li>{{name}} {{email}} <a href="/editar/{{id}}">Editar</a> <a href="/delete/{{id}}">Deletar</a></li>
             {{/users}}
         </section>
 

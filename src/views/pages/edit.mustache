@@ -1,0 +1,26 @@
+{{>partials/header}}
+    <aside>
+        <section class="user-add">
+            <h2>Adicionar Usuarios</h2>
+            <form method="POST" action="/useredit">
+                <input 
+                    type="text" 
+                    name="name" 
+                    value="{{name}}" 
+                    placeholder="Digite o seu nome"
+                />
+                <input 
+                    type="text" 
+                    name="email" 
+                    value="{{email}}" 
+                    placeholder="Digite o seu email"
+                />
+                <input type="hidden" name="id" value={{id}}/>
+                <input
+                    type="submit" 
+                    value="Atualizar"
+                />
+            </form>
+        </section>
+    </aside>
+{{>partials/footer}}

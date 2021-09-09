@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 import { Home } from '../controllers/homeController';
 import { Contact, TestFunction, About } from '../controllers/infoController';
-import { AgeUser, ScreenAddUser, AddUserAction } from '../controllers/userController';
+import { AgeUser, ScreenAddUser, AddUserAction, EditUserScreen, EditUserAction, DeleteUser } from '../controllers/userController';
 
 const router = Router();
 
@@ -16,5 +16,10 @@ router.post('/contato-res', AgeUser);
 
 router.get('/user', ScreenAddUser);
 router.post('/useradd', AddUserAction);
+
+router.get('/editar/:id', EditUserScreen);
+router.post('/useredit', EditUserAction);
+
+router.get('/delete/:id', DeleteUser);
 
 export default router;

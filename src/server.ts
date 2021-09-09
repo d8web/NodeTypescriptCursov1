@@ -1,8 +1,10 @@
 import express, { Request, Response } from 'express';
 import mustache from 'mustache-express';
+import dotenv from 'dotenv';
 import path from 'path';
 import MainRoutes from './routes/index';
 
+dotenv.config();
 const server = express();
 
 // Configurando o Mustache
@@ -23,4 +25,4 @@ server.use((req: Request, res: Response) => {
     res.send('Página não encontrada!');
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 4000);
