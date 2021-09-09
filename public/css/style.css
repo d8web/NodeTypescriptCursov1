@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202225;
+    padding: 10px;
+}
+
+header, aside, footer {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+}
+
+header {
+    background-color: cornflowerblue;
+}
+
+aside {
+    background-color: crimson;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    margin: 10px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.cachoeiras, .cars, .age-area {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.cars, .cachoeiras {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.attractive-image {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.contato-area {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-area form {
+    width: 40%;
+}
+
+.contato-area input,
+.user-add form input {
+    width: 100%;
+    margin: 20px 0px;
+    min-height: 40px;
+    outline: none;
+    font-size: 18px;
+    font-weight: medium;
+}
+
+.contato-area input[type=text] {
+    padding-left: 10px;
+}
+
+.show-age-area {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.users {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.user-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.user-add form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}

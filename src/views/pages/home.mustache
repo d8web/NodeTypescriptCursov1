@@ -1,0 +1,43 @@
+{{>partials/header}}
+    <aside>
+
+        <section class="age-area">
+            {{#showNumber}}
+                <p>Você é maior de Idade.</p>
+            {{/showNumber}}
+            {{^showNumber}}
+                <p>Você não é maior de Idade.</p>
+            {{/showNumber}}
+        </section>
+        <hr/>
+
+        <!-- Exibindo lista, [Array] de objetos -->
+        <section class="cachoeiras">
+            {{#cachoeiras}}
+                {{>partials/attractive}}
+            {{/cachoeiras}}
+
+            <img class="attractive-image" src="images/borboletas.jpg"/>
+
+        </section>
+        <hr/>
+
+        <!-- Lista simples exibição -->
+        <section class="cars">
+            {{#cars}}
+                <p>{{.}}</p>
+            {{/cars}}
+            {{^cars}}
+                <p>Não há carros para exibir.</p>
+            {{/cars}}
+        </section>
+        <hr/>
+
+        <section class="users">
+            {{#users}}
+                <p>{{name}} | {{email}}</p>
+            {{/users}}
+        </section>
+
+    </aside>
+{{>partials/footer}}

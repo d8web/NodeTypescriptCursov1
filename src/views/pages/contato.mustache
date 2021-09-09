@@ -1,0 +1,16 @@
+{{>partials/header}}
+
+    <div class="show-age-area">
+        {{#showAge}}
+            <p>Você tem {{idade}} anos.</p>
+        {{/showAge}}
+    </div>
+
+    <section class="contato-area">
+        <form method="POST" action="/contato-res">
+            <input type="number" name="year" placeholder="Digite o ano do seu Nascimento"/><br/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </section>
+
+{{>partials/footer}}

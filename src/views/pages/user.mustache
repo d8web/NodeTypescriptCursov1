@@ -1,0 +1,12 @@
+{{>partials/header}}
+    <aside>
+        <section class="user-add">
+            <h2>Adicionar Usuarios</h2>
+            <form method="POST" action="/useradd">
+                <input type="text" name="name" placeholder="Digite o seu nome"/>
+                <input type="text" name="email" placeholder="Digite o seu email"/>
+                <input type="submit" value="Cadastrar"/>
+            </form>
+        </section>
+    </aside>
+{{>partials/footer}}
